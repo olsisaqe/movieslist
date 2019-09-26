@@ -17,7 +17,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         viewModel.moviesLiveData.observe(this, Observer<Resource<List<Movie>>> {
-            fun onChanged(t: Resource<List<Movie>>?) {
+            fun onChanged(movies: Resource<List<Movie>>?) {
+                val movies1 = movies
+
             }
 
         })

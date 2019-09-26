@@ -43,7 +43,10 @@ class App : Application() {
         single {
             HttpClient {
                 install(JsonFeature) {
-                    acceptContentTypes = listOf(ContentType.Application.Json, ContentType.parse("text/html"))
+                    acceptContentTypes = listOf(
+                        ContentType.Application.Json,
+                        ContentType.parse("text/html") // the api content is html instead of json
+                    )
                     serializer = KotlinxSerializer(Json.nonstrict).apply {
                         setMapper(MoviesData::class, MoviesData.serializer())
                         setMapper(MovieData::class, MovieData.serializer())
