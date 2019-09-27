@@ -1,0 +1,65 @@
+{
+  "image_base": "https://dummyimage.com",
+  "movie_offers": [
+    {
+      "price": "32.00€",
+      "image": "/600x400/ffffff/ffffff",
+      "available": false,
+      "movie_id": 1
+    },
+    {
+      "price": "27.00€",
+      "image": "/600x400/ff0000/ffffff",
+      "available": false,
+      "movie_id": 2
+    },
+    {
+      "price": "30.00€",
+      "image": "/600x400/ff0000/ffffff",
+      "available": false,
+      "movie_id": 3
+    },
+    {
+      "price": "5.00€",
+      "image": "/600x400/0000ff/ffffff",
+      "available": false,
+      "movie_id": 4
+    },
+    {
+      "price": "18.00€",
+      "image": "/600x400/00ff00/ffffff",
+      "available": true,
+      "movie_id": 5
+    },
+    {
+      "price": "10.00€",
+      "image": "/600x400/ffffff/ffffff",
+      "available": true,
+      "movie_id": 6
+    },
+    {
+      "price": "20.00€",
+      "image": "/600x400/ffffff/ffffff",
+      "available": false,
+      "movie_id": 7
+    },
+    {
+      "price": "24.00€",
+      "image": "/600x400/ff0000/ffffff",
+      "available": false,
+      "movie_id": 8
+    },
+    {
+      "price": "14.00€",
+      "image": "/600x400/00ff00/ffffff",
+      "available": false,
+      "movie_id": 9
+    },
+    {
+      "price": "31.00€",
+      "image": "/600x400/00ff00/ffffff",
+      "available": false,
+      "movie_id": 10
+    }
+  ]
+}
