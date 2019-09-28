@@ -26,10 +26,15 @@ class MainViewModel(private val moviesRepository: MoviesRepository) : ViewModel(
     private fun fetchData() {
         _moviesLiveData.value = Resource.loading()
         viewModelScope.launch {
-            val moviesData = moviesRepository.moviesData()
-            val moviesDetail = moviesRepository.moviesDetail()
-            val movies = mapToMovie(moviesData, moviesDetail)
-            _moviesLiveData.postValue(Resource.success(movies))
+            try {
+                val moviesData = moviesRepository.moviesData()
+                val moviesDetail = moviesRepository.moviesDetail()
+                val movies = mapToMovie(moviesData, moviesDetail)
+                _moviesLiveData.postValue(Resource.success(movies))
+            } catch (throwable: Throwable) {
+                _moviesLiveData.postValue(Resource.error(throwable))
+            }
+
         }
     }
 

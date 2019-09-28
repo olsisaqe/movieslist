@@ -37,7 +37,7 @@ class MainViewModelTest {
     private val mainThreadSurrogate = newSingleThreadContext("UI thread")
     private lateinit var moviesData: MoviesData
     private lateinit var moviesDetail: MoviesDetail
-    private val error = kotlin.Throwable()
+    private val error = Throwable()
     private val moviesEvents = mutableListOf<Resource<List<Movie>>>()
 
     @Rule
@@ -151,18 +151,38 @@ class MainViewModelTest {
         }
     }
 
+    @Test
+    fun onErrorMoviesData() {
+        moviesRepository.stub { onBlocking { moviesData() }.doThrow(error) }
+
+        val viewModel = MainViewModel(moviesRepository)
+        viewModel.moviesLiveData.observeForever { moviesEvents.add(it) }
+
+        verifyBlocking(moviesRepository, times(1)) {
+            moviesData()
+        }
+        assertEquals(moviesEvents.map { it.status }, listOf(LOADING, ERROR))
+        assertEquals(moviesEvents[1].cause!!, error)
+    }
+
+    @Test
+    fun onErrorMoviesDetail() {
+        moviesRepository.stub { onBlocking { moviesDetail() }.doThrow(error) }
+
+        val viewModel = MainViewModel(moviesRepository)
+        viewModel.moviesLiveData.observeForever { moviesEvents.add(it) }
+
+        verifyBlocking(moviesRepository, times(1)) {
+            moviesDetail()
+        }
+        assertEquals(moviesEvents.map { it.status }, listOf(LOADING, ERROR))
+        assertEquals(moviesEvents[1].cause!!, error)
+    }
+
     private fun initSuccess() {
         moviesRepository.stub {
             onBlocking { moviesData() }.doReturn(moviesData)
             onBlocking { moviesDetail() }.doReturn(moviesDetail)
         }
     }
-
-    private fun initError() {
-        moviesRepository.stub {
-            onBlocking { moviesData() }.doThrow(error)
-            onBlocking { moviesDetail() }.doThrow(error)
-        }
-    }
-
 }
