@@ -17,6 +17,7 @@ import io.ktor.client.features.logging.Logging
 import io.ktor.client.features.logging.SIMPLE
 import io.ktor.http.ContentType
 import io.ktor.util.KtorExperimentalAPI
+import kotlinx.serialization.UnstableDefault
 import kotlinx.serialization.json.Json
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -36,6 +37,7 @@ class App : Application() {
         }
     }
 
+    @UseExperimental(UnstableDefault::class)
     private val appModule = module {
         single {
             Environment("dev", "https://7f6589e2-26c2-4250-8c0d-f2ff7eb67872.mock.pstmn.io")

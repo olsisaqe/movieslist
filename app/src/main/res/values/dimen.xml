@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="theme_gridunit_0_5">4dp</dimen>
+    <dimen name="theme_gridunit_1">8dp</dimen>
+    <dimen name="theme_gridunit_1_5">12dp</dimen>
+
+    <dimen name="theme_gridunit_2">16dp</dimen>
+    <dimen name="theme_gridunit_2_5">20dp</dimen>
+    <dimen name="theme_gridunit_3">24dp</dimen>
+    <dimen name="theme_gridunit_3_5">28dp</dimen>
+    <dimen name="theme_gridunit_4">32dp</dimen>
+    <dimen name="theme_gridunit_4_5">36dp</dimen>
+    <dimen name="theme_gridunit_5">40dp</dimen>
+    <dimen name="theme_gridunit_5_5">44dp</dimen>
+    <dimen name="theme_gridunit_6">48dp</dimen>
+    <dimen name="theme_gridunit_6_5">52dp</dimen>
+    <dimen name="theme_gridunit_7">56dp</dimen>
+    <dimen name="theme_gridunit_7_5">60dp</dimen>
+    <dimen name="theme_gridunit_8">64dp</dimen>
+    <dimen name="theme_gridunit_8_5">68dp</dimen>
+    <dimen name="theme_gridunit_9">72dp</dimen>
+    <dimen name="theme_gridunit_9_5">76dp</dimen>
+    <dimen name="theme_gridunit_10">80dp</dimen>
+    <dimen name="theme_gridunit_10_5">84dp</dimen>
+    <dimen name="theme_gridunit_11">88dp</dimen>
+    <dimen name="theme_gridunit_11_5">92dp</dimen>
+    <dimen name="theme_gridunit_12">96dp</dimen>
+
+    <dimen name="movie_image_height">160dp</dimen>
+</resources>

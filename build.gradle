@@ -9,6 +9,7 @@ buildscript {
     ext.lifecycle_version = '2.1.0'
     ext.mockitoVersion = '2.21.0'
     ext.mockito_kotlin = '2.2.0'
+    ext.glide_version = '4.10.0'
     repositories {
         google()
         jcenter()
