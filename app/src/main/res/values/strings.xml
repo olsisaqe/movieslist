@@ -3,4 +3,5 @@
     <string name="error_title">Upsss something went wrong…</string>
     <string name="retry">Retry</string>
     <string name="empty">No Movies available at the moment.</string>
+    <string name="price">Price: %s</string>
 </resources>

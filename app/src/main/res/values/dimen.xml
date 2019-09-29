@@ -27,4 +27,6 @@
     <dimen name="theme_gridunit_12">96dp</dimen>
 
     <dimen name="movie_image_height">160dp</dimen>
+    <dimen name="moview_cardview_elevation">4dp</dimen>
+    <dimen name="moview_cardview_corner">4dp</dimen>
 </resources>
