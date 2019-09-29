@@ -31,15 +31,22 @@ class MoviesAdapter : ListAdapter<Movie, MoviesAdapter.MoviesViewHolder>(DIFF) {
         val item = LayoutInflater.from(context).inflate(R.layout.list_item_movie, parent, false)
         val holder = MoviesViewHolder(item)
         item.setOnClickListener {
-            if (getItem(holder.adapterPosition).available == false) return@setOnClickListener
-            expandedPosition = if (holder.adapterPosition == expandedPosition) {
+            val itemPosition = holder.adapterPosition
+            if (getItem(itemPosition).available == false) return@setOnClickListener
+            val oldItemPosition = expandedPosition
+            expandedPosition = if (itemPosition == expandedPosition) {
                 null
             } else {
-                holder.adapterPosition
+                itemPosition
             }
-            notifyItemChanged(holder.adapterPosition)
-            if (holder.adapterPosition > 0) notifyItemChanged(holder.adapterPosition - 1)
-            if (holder.adapterPosition < itemCount - 1) notifyItemChanged(holder.adapterPosition + 1)
+            notifyItemChanged(itemPosition)
+            if (itemPosition > 0) notifyItemChanged(itemPosition - 1)
+            if (itemPosition < itemCount - 1) notifyItemChanged(itemPosition + 1)
+            if (oldItemPosition != null && oldItemPosition !in itemPosition - 1..itemPosition + 1) {
+                notifyItemChanged(oldItemPosition)
+                if (oldItemPosition > 0) notifyItemChanged(oldItemPosition - 1)
+                if (oldItemPosition < itemCount - 1) notifyItemChanged(oldItemPosition + 1)
+            }
         }
         return holder
     }
