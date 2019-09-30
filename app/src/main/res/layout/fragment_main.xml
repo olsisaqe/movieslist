@@ -22,7 +22,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/containerError"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
