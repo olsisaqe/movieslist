@@ -6,7 +6,7 @@ plugins {
 }
 
 kotlin {
-    val serialization_version = "1.3.50"
+    val serialization_version = "0.13.0"
     val ktor_version = "1.2.4"
     val coroutines_version = "1.3.2"
 

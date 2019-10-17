@@ -1,4 +1,4 @@
-package com.olsisaqe.movielist.model.api
+package com.olsisaqe.movielist.core.model
 
 import kotlinx.serialization.Serializable
 

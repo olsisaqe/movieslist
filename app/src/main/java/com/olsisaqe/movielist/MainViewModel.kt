@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.olsisaqe.movielist.model.api.MoviesData
-import com.olsisaqe.movielist.model.api.MoviesDetail
+import com.olsisaqe.movielist.core.model.MoviesData
+import com.olsisaqe.movielist.core.model.MoviesDetail
+import com.olsisaqe.movielist.core.network.MoviesRepository
 import com.olsisaqe.movielist.model.ui.Movie
 import com.olsisaqe.movielist.model.ui.Resource
-import com.olsisaqe.movielist.network.MoviesRepository
 import kotlinx.coroutines.launch
 
 class MainViewModel(private val moviesRepository: MoviesRepository) : ViewModel() {
