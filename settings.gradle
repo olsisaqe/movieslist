@@ -1,2 +1,3 @@
-include ':app'
+include ':app', ':core'
 rootProject.name='MovieList'
+enableFeaturePreview("GRADLE_METADATA")
