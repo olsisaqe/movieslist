@@ -13,7 +13,23 @@
 		066056DA2358C53900C0DDD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 066056D92358C53900C0DDD1 /* Assets.xcassets */; };
 		066056DD2358C53900C0DDD1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 066056DC2358C53900C0DDD1 /* Preview Assets.xcassets */; };
 		066056E02358C53900C0DDD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 066056DE2358C53900C0DDD1 /* LaunchScreen.storyboard */; };
+		066056EE2358C7CD00C0DDD1 /* core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066056E92358C6D100C0DDD1 /* core.framework */; };
+		066056EF2358C7CD00C0DDD1 /* core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 066056E92358C6D100C0DDD1 /* core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		066056F02358C7CD00C0DDD1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				066056EF2358C7CD00C0DDD1 /* core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		066056D02358C53700C0DDD1 /* MovieList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,8 @@
 		066056DC2358C53900C0DDD1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		066056DF2358C53900C0DDD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		066056E12358C53900C0DDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		066056E82358C6B700C0DDD1 /* xcode-frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "xcode-frameworks"; path = "../../core/build/xcode-frameworks"; sourceTree = "<group>"; };
+		066056E92358C6D100C0DDD1 /* core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = core.framework; path = "../../core/build/xcode-frameworks/core.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				066056EE2358C7CD00C0DDD1 /* core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +61,7 @@
 			children = (
 				066056D22358C53700C0DDD1 /* MovieList */,
 				066056D12358C53700C0DDD1 /* Products */,
+				066056E72358C6B700C0DDD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +95,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		066056E72358C6B700C0DDD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				066056E92358C6D100C0DDD1 /* core.framework */,
+				066056E82358C6B700C0DDD1 /* xcode-frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 066056E42358C53900C0DDD1 /* Build configuration list for PBXNativeTarget "MovieList" */;
 			buildPhases = (
+				066056ED2358C76C00C0DDD1 /* ShellScript */,
 				066056CC2358C53700C0DDD1 /* Sources */,
 				066056CD2358C53700C0DDD1 /* Frameworks */,
 				066056CE2358C53700C0DDD1 /* Resources */,
+				066056F02358C7CD00C0DDD1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +171,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		066056ED2358C76C00C0DDD1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd \"$SRCROOT/../../core/build/xcode-frameworks\"\n./gradlew :core:packForXCode -PXCODE_CONFIGURATION=${CONFIGURATION}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		066056CC2358C53700C0DDD1 /* Sources */ = {
@@ -287,6 +338,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MovieList/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../core/build/xcode-frameworks";
 				INFOPLIST_FILE = MovieList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +358,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MovieList/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../core/build/xcode-frameworks";
 				INFOPLIST_FILE = MovieList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
