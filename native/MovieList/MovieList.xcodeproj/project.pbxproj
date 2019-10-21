@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0658DF58235DAF5000DAE8A6 /* MoviesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0658DF57235DAF5000DAE8A6 /* MoviesStore.swift */; };
 		066056D42358C53700C0DDD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066056D32358C53700C0DDD1 /* AppDelegate.swift */; };
 		066056D62358C53700C0DDD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066056D52358C53700C0DDD1 /* SceneDelegate.swift */; };
 		066056D82358C53700C0DDD1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066056D72358C53700C0DDD1 /* ContentView.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0658DF57235DAF5000DAE8A6 /* MoviesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesStore.swift; sourceTree = "<group>"; };
 		066056D02358C53700C0DDD1 /* MovieList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		066056D32358C53700C0DDD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		066056D52358C53700C0DDD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				066056D32358C53700C0DDD1 /* AppDelegate.swift */,
 				066056D52358C53700C0DDD1 /* SceneDelegate.swift */,
 				066056D72358C53700C0DDD1 /* ContentView.swift */,
+				0658DF57235DAF5000DAE8A6 /* MoviesStore.swift */,
 				066056D92358C53900C0DDD1 /* Assets.xcassets */,
 				066056DE2358C53900C0DDD1 /* LaunchScreen.storyboard */,
 				066056E12358C53900C0DDD1 /* Info.plist */,
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0658DF58235DAF5000DAE8A6 /* MoviesStore.swift in Sources */,
 				066056D42358C53700C0DDD1 /* AppDelegate.swift in Sources */,
 				066056D62358C53700C0DDD1 /* SceneDelegate.swift in Sources */,
 				066056D82358C53700C0DDD1 /* ContentView.swift in Sources */,

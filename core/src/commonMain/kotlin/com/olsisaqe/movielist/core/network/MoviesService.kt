@@ -4,7 +4,7 @@ import com.olsisaqe.movielist.core.model.MoviesData
 import com.olsisaqe.movielist.core.model.MoviesDetail
 import com.olsisaqe.movielist.core.model.ui.Movie
 
-class MoviesService(private val moviesRepository: MoviesRepository) {
+open class MoviesService(private val moviesRepository: MoviesRepository) {
 
     suspend fun getMovies(): List<Movie> {
         val moviesData = moviesRepository.moviesData()
