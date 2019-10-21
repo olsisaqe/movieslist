@@ -2,14 +2,12 @@ package com.olsisaqe.movielist
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.nhaarman.mockitokotlin2.*
-import com.olsisaqe.movielist.model.api.MoviesData
-import com.olsisaqe.movielist.model.api.MoviesDetail
+import com.olsisaqe.movielist.core.model.MoviesData
+import com.olsisaqe.movielist.core.model.MoviesDetail
+import com.olsisaqe.movielist.core.network.MoviesRepository
 import com.olsisaqe.movielist.model.ui.Movie
 import com.olsisaqe.movielist.model.ui.Resource
-import com.olsisaqe.movielist.model.ui.Resource.Status.LOADING
-import com.olsisaqe.movielist.model.ui.Resource.Status.ERROR
-import com.olsisaqe.movielist.model.ui.Resource.Status.SUCCESS
-import com.olsisaqe.movielist.network.MoviesRepository
+import com.olsisaqe.movielist.model.ui.Resource.Status.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.newSingleThreadContext

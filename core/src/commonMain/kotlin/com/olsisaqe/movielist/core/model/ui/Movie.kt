@@ -1,4 +1,4 @@
-package com.olsisaqe.movielist.model.ui
+package com.olsisaqe.movielist.core.model.ui
 
 data class Movie(
     val movieId: Int,

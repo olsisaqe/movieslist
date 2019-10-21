@@ -45,6 +45,7 @@ dependencies {
     annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
     testImplementation 'junit:junit:4.12'
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
     testImplementation "org.mockito:mockito-core:$mockitoVersion"
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockito_kotlin"
     testImplementation 'androidx.arch.core:core-testing:2.1.0'

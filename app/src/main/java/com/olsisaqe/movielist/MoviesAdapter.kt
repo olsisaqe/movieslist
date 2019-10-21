@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.olsisaqe.movielist.model.ui.Movie
+import com.olsisaqe.movielist.core.model.ui.Movie
 import kotlinx.android.synthetic.main.list_item_movie.view.*
 
 class MoviesAdapter : ListAdapter<Movie, MoviesAdapter.MoviesViewHolder>(DIFF) {
@@ -24,7 +24,7 @@ class MoviesAdapter : ListAdapter<Movie, MoviesAdapter.MoviesViewHolder>(DIFF) {
         }
     }
 
-    var expandedPosition: Int? = null
+    private var expandedPosition: Int? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {
         val context = parent.context

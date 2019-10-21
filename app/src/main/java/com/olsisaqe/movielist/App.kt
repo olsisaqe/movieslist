@@ -3,6 +3,7 @@ package com.olsisaqe.movielist
 import android.app.Application
 import com.olsisaqe.movielist.core.network.MoviesRepository
 import com.olsisaqe.movielist.core.network.MoviesRest
+import com.olsisaqe.movielist.core.network.MoviesService
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -24,6 +25,7 @@ class App : Application() {
         factory<MoviesRepository> {
             MoviesRest()
         }
+        factory { MoviesService(get()) }
         viewModel {
             MainViewModel(get())
         }
